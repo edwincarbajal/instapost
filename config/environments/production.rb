@@ -1,6 +1,17 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # AWS S3
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('instapost-wb'),
+    access_key_id: ENV.fetch('AKIAJ3CI3PGCASORHTUA'),
+    secret_access_key: ENV.fetch('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'),
+    s3_region: ENV.fetch('US_WEST'),
+  }
+}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

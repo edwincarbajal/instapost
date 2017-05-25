@@ -1,4 +1,4 @@
-<%= simple_form_for @post do |f| %>
+<%= simple_form_for @post, multipart: true do |f| %>
    <%= f.input  :image %>
    <%= f.input  :caption %>
    <%= f.submit :submit %>
