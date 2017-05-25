@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.3'
 gem 'paperclip', '~> 5.0.0'
 # aws
 gem 'aws-sdk', '~> 2.3'
+# figaro
+gem 'figaro'
 # simple-form
 gem 'simple_form'
 # bootsrap v4
