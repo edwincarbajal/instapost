@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.3'
 # Paperclip
 gem 'paperclip', '~> 5.0.0'
+# aws
+gem 'aws-sdk', '~> 2.3'
 # simple-form
 gem 'simple_form'
 # bootsrap v4
