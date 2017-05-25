@@ -7,7 +7,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
