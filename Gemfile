@@ -12,8 +12,9 @@ gem 'rails', '~> 5.0.3'
 gem 'paperclip', '~> 5.0.0'
 # simple-form
 gem 'simple_form'
-# bootsrap
-gem 'bootstrap-sass'
+# bootsrap v4
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'rails-assets-tether', '>= 1.3.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
