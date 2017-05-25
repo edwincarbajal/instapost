@@ -5,12 +5,12 @@ Rails.application.configure do
   config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
-    bucket: ENV.fetch('instapost-wb'),
-    access_key_id: ENV.fetch('AKIAJ3CI3PGCASORHTUA'),
-    secret_access_key: ENV.fetch('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'),
-    s3_region: ENV.fetch('US_WEST'),
-    }
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
   }
+}
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
