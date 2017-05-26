@@ -1,0 +1,15 @@
+<div class="posts-wrapper row">
+      <div class="post">
+        <div class="post-head">
+          <div class="name">
+            edwin
+          </div>
+        </div>
+        <div class="image center-block">
+          <%= image_tag @post.image.url(:medium), class: "img-responsive"%>
+        </div>
+        <p class="caption">
+          <%= @post.caption %>
+        </p>
+      </div>
+</div>

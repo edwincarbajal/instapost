@@ -1,5 +1,14 @@
-<%= simple_form_for @post, multipart: true do |f| %>
-   <%= f.input  :image %>
-   <%= f.input  :caption %>
-   <%= f.submit :submit %>
-<% end %>
+<div class="form-wrapper">
+  <%= simple_form_for @post, multipart: true, html: { class: "form-horizontal" } do |f| %>
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <%= f.input  :image, label: false, input_html: { class: "form-control-file" } %>
+    </div>
+    <div class="form-group text-center">
+     <%= f.input  :caption %>
+    </div>
+    <div class="form-group text-center">
+     <%= f.submit :submit, class: "btn btn-success" %>
+    </div>
+  <% end %>
+</div>
