@@ -44,7 +44,20 @@ body {
   line-height: 18px;
   .thumbnail {}
   .name {
-    display: block;
+    display: inline-block;
+  }
+  .settings {
+    display: inline-block;
+    float: right;
+    border: 0px;
+  }
+  .settings .btn {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .settings .dropdown-toggle::after {
+    margin-left: 0;
   }
 }
 
