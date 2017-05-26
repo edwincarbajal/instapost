@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show]
+  before_action :get_posts, only: [:index]
 
   def index
-    @posts = Post.all
   end
 
   def show
@@ -22,6 +22,10 @@ class PostsController < ApplicationController
   end
 
   private
+
+    def get_posts
+      @posts = Post.all.sort { |a, b| b.created_at <=> a.created_at }
+    end
 
     def set_post
       @post = Post.find(params[:id])
