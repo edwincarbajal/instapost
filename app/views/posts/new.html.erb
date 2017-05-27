@@ -1,5 +1,6 @@
 <div class="form-wrapper">
   <%= simple_form_for @post, multipart: true, html: { class: "form-horizontal" } do |f| %>
+    <%= render 'posts/error_messages' %>
     <div class="form-group">
       <label for="exampleInputFile">File input</label>
       <%= f.input  :image, label: false, input_html: { class: "form-control-file" } %>
