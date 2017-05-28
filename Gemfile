@@ -18,6 +18,8 @@ gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 # simple-form
 gem 'simple_form'
+# fontawesome
+gem "font-awesome-rails"
 # bootsrap v4
 gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use Puma as the app server

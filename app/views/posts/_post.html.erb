@@ -1,26 +1,29 @@
-<div class="post">
-  <div class="post-head">
-    <div class="name">
-      <%= p.user.user_name %>
-    </div>
-    <% if p.user.id === current_user.id %>
-      <div class="settings">
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <%= link_to 'Edit', edit_post_path(p), class: "dropdown-item" %>
-            <%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "dropdown-item" %>
-          </div>
-        </div>
+<div class="post-wrapper">
+  <div class="post">
+    <div class="post-head">
+      <div class="thumb-img"></div>
+      <div class="user-name">
+        <%= p.user.user_name %>
       </div>
-    <% end %>
+      <%= render 'posts/post_settings', p: p %>
+    </div>
+    <div class="image center-block">
+      <%= link_to(image_tag( p.image.url(:medium), class: "img-responsive" ), post_path(p) )%>
+    </div>
+    <div class="post-bottom">
+      <div class="caption">
+        <div class="user-name">
+          <%= p.user.user_name %>
+        </div>
+        <%= p.caption %>
+      </div>
+      <%= render 'comments/comments', p: p %>
+      <div class="comment-like-form row">
+        <div class="like-button col-sm-1">
+          <%= fa_icon("heart-o") %>
+        </div>
+        <%= render 'comments/form', p: p %>
+      </div>
+    </div>
   </div>
-  <div class="image center-block">
-    <%= link_to(image_tag( p.image.url(:medium), class: "img-responsive" ), post_path(p) )%>
-  </div>
-  <p class="caption">
-    <%= p.caption %>
-  </p>
 </div>
