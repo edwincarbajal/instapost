@@ -17,7 +17,11 @@
         </div>
         <%= p.caption %>
       </div>
-      <%= render 'comments/comments', p: p %>
+      <% if p.comments %>
+        <% p.comments.each do |comment| %>
+          <%= render 'comments/comments', p: p %>
+        <% end %>
+      <% end %>
       <div class="comment-like-form row">
         <div class="like-button col-sm-1">
           <%= fa_icon("heart-o") %>
