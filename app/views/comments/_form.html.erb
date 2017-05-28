@@ -1,0 +1,5 @@
+<div class="comment-form col-sm-11">
+  <%=  form_for [p, p.comments.new] do |f| %>
+    <%= f.text_field :content, placeholder: "Add a comment..." %>
+  <% end %>
+</div>
