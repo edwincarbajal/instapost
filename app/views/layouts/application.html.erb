@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= render 'layouts/meta' %>
     <title><%= full_title(yield(:title)) %></title>
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
@@ -8,10 +9,10 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div class="container-fluid">
       <%= render 'layouts/flash_message' %>
       <%= yield %>
+      <%#= debug(params) if Rails.env.development? %>
     </div>
-    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
