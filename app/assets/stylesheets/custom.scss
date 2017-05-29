@@ -117,6 +117,7 @@ nav {
   font-size: 15px;
   line-height: 18px;
   border: medium none;
+  outline: none;
   width: 100%;
   color: #4B4F54;
 }
@@ -133,13 +134,13 @@ nav {
   justify-content: center;
 }
 
-.comment-form {
-  #comment_content {
-    width: 100%;
-    border: none;
-    outline: none;
-  }
-}
+// .comment-form {
+//   .comment_content {
+//     width: 100%;
+//     border: none;
+//     outline: none;
+//   }
+// }
 
 .form-wrapper {
   width: 60%;

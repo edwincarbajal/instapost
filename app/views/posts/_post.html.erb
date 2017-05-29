@@ -12,16 +12,20 @@
     </div>
     <div class="post-bottom">
       <div class="caption">
-        <div class="user-name">
-          <%= p.user.user_name %>
+        <div class="caption-content">
+          <div class="user-name">
+            <%= p.user.user_name %>
+          </div>
+          <%= p.caption %>
         </div>
-        <%= p.caption %>
       </div>
-      <% if p.comments %>
-        <% p.comments.each do |comment| %>
-          <%= render 'comments/comments', p: p %>
+      <div id="<%= "comments_#{p.id}" %>">
+        <% if p.comments %>
+          <% p.comments.each do |comment| %>
+            <%= render 'comments/comment', comment: comment, p: p %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
       <div class="comment-like-form row">
         <div class="like-button col-sm-1">
           <%= fa_icon("heart-o") %>

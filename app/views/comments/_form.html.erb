@@ -1,5 +1,5 @@
 <div class="comment-form col-sm-11">
-  <%=  form_for [p, p.comments.new] do |f| %>
-    <%= f.text_field :content, placeholder: "Add a comment..." %>
+  <%=  form_for [p, p.comments.build], remote: true do |f| %>
+    <%= f.text_field :content, placeholder: "Add a comment...", class: "comment_content", id: "comment_content_#{p.id}" %>
   <% end %>
 </div>
