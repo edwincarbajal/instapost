@@ -241,3 +241,17 @@ nav {
     left: 100%;
     margin-left: 15px;
 }
+
+/* footer */
+
+footer {
+  position: relative;
+  bottom: 30px;
+  left: 0;
+  display: block;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+  }
+}
