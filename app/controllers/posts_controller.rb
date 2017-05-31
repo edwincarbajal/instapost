@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   private
 
     def get_posts
-      @posts = Post.all.sort { |a, b| b.created_at <=> a.created_at }
+      @posts = Post.all.order('created_at DESC').page params[:page]
     end
 
     def set_post
