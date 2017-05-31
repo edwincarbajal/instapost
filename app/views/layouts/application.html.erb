@@ -12,11 +12,11 @@
     <div class="container-fluid">
       <%= render 'layouts/flash_message' %>
       <%= yield %>
-      <!-- <footer>
+      <footer>
         <p>
-          Made with <%= fa_icon("heart-o") %> by <%= link_to 'Edwin', 'wwww.edwincarbajal'%>
+          Made with <span class="heart"><%= fa_icon("heart-o") %></span> by <%= link_to 'Edwin', 'http://edwincarbajal.com'%>
         </p>
-      </footer> -->
+      </footer>
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
