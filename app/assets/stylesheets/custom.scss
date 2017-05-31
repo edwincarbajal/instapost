@@ -122,6 +122,14 @@ nav {
   line-height: 18px;
 }
 
+.comments {
+  .paginator {
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
 .comment_content {
   font-size: 15px;
   line-height: 18px;
@@ -166,6 +174,7 @@ nav {
     border-radius: 50%;
   }
 }
+
 #load_more {
   display: table-cell;
   font-size: 12px;
@@ -224,42 +233,42 @@ nav {
 
 /* log in */
 .strike {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 5px 20px 8px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 5px 20px 8px;
 }
 
 .strike > span {
-    position: relative;
-    display: inline-block;
-    color: #999;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 15px;
-    margin: 0 8px;
-    text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 8px;
+  text-transform: uppercase;
 }
 
 .strike > span:before,
 .strike > span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 9999px;
-    height: 1px;
-    background: #999;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: #999;
 }
 
 .strike > span:before {
-    right: 100%;
-    margin-right: 15px;
+  right: 100%;
+  margin-right: 15px;
 }
 
 .strike > span:after {
-    left: 100%;
-    margin-left: 15px;
+  left: 100%;
+  margin-left: 15px;
 }
 
 /* footer */
@@ -273,8 +282,8 @@ footer {
     margin-bottom: 0;
     text-align: center;
     color: #000;
-  .heart {
-    color: red;
-  }
+    .heart {
+      color: red;
+    }
   }
 }
