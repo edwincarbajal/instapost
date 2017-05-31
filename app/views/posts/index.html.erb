@@ -1,5 +1,6 @@
-<div class="posts-wrapper row">
-    <% @posts.each do |p| %>
-      <%= render 'posts/post', p: p %>
-    <% end %>
+<div id="posts" class="posts-wrapper row">
+  <%= render 'posts/posts'%>
+</div>
+<div id="paginator" class="text-center">
+  <%= link_to_next_page @posts, 'View More', remote: true, id: 'load_more' %>
 </div>

@@ -18,6 +18,8 @@ gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 # simple-form
 gem 'simple_form'
+# pagination
+gem'kaminari'
 # fontawesome
 gem "font-awesome-rails"
 # bootsrap v4
