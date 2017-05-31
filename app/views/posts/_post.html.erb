@@ -22,11 +22,17 @@
           <%= p.caption %>
         </div>
       </div>
-      <div id="<%= "comments_#{p.id}" %>">
-        <% if p.comments %>
-          <% p.comments.each do |comment| %>
-            <%= render 'comments/comment', comment: comment, p: p %>
-          <% end %>
+      <div id="<%= "comments_#{p.id}" %>" class="comments">
+        <% if p.comments.any? %>
+          <div class="paginator" id="comments-paginator-<%= "#{p.id}" %>">
+            <% unless p.comments.count <= 4 %>
+              <%= link_to "view all #{p.comments.count} comments", post_comments_path(p), remote: true, class: 'more-comments', data: { post_id: "#{p.id}", type: "html" } %>
+            <% end %>
+          </div>
+          <%= render p.comments.last(4), p: p %>
+          <!-- <% p.comments.each do |comment| %>
+            <%#= render 'comments/comment', comment: comment, p: p %>
+          <% end %> -->
         <% end %>
       </div>
       <div class="comment-like-form row">
