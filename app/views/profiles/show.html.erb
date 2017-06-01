@@ -1,0 +1,7 @@
+<% if @user === current_user %>
+  <%= link_to 'Edit Profile', edit_profile_path(@user.user_name) %>
+<% end %>
+
+<div id="posts" class="posts-wrapper row">
+  <%= render 'posts/posts'%>
+</div>
