@@ -1,6 +1,30 @@
-<% if @user === current_user %>
-  <%= link_to 'Edit Profile', edit_profile_path(@user.user_name) %>
-<% end %>
+<div class="posts-wrapper">
+  <div class="row profile-header">
+    <div class="col-md-6">
+      <div class="img-circle">
+        <%= profile_avatar_select(@user) %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="user-name-and-follow">
+        <h3 class="profile-user-name">
+          <%= @user.user_name %>
+        </h3>
+        <span>
+          <% if @user === current_user %>
+            <%= link_to 'Edit Profile', edit_profile_path(@user.user_name), class: 'btn edit-button' %>
+          <% end %>
+        </span>
+        <p class="profile-bio">
+          <%= @user.bio %>
+        </p>
+        <div class="user-statistics">
+          <p><%= pluralize(@user.posts.count, 'post') %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="posts" class="posts-wrapper row">
   <%= render 'posts/posts'%>

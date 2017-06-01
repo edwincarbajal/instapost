@@ -10,21 +10,22 @@
                 <div class="img-circle">
                   <%= profile_avatar_select(@user) %>
                 </div>
-                <%=  file_field :avatar, onChange: 'loadFile(event)' %>
+                <%=  f.file_field :avatar, onChange: 'loadFile(event)' %>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-sm-12">
               <div class="form-group text-center">
                 <h4>Update your bio:</h4>
-                <%= f.text_area :bio, label: false, rows: 4 %>
+                <%= f.text_area :bio, label: false, rows: 4, id: "edit-profile-bio" %>
               </div>
             </div>
           </div>
 
           <div class="form-group text-center">
+            <%= link_to 'Cancel', profile_path(@user.user_name), class: "btn btn-danger" %>
             <%= f.submit "Update Profile", class: "btn btn-success" %>
           </div>
         <% end %>

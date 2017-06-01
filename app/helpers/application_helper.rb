@@ -17,11 +17,19 @@ module ApplicationHelper
     }[flash_type.to_sym] || flash_type.to_s
   end
 
+  def form_image_select(post)
+    return image_tag post.image.url(:medium),
+                      id:'image-preview',
+                      class:'img-responsive' if post.image.exists?
+    image_tag 'default-avatar.jpg', id:'image-preview',
+                                 class:'img-responsive'
+  end
+
   def profile_avatar_select(user)
     return image_tag user.avatar.url(:medium),
-                      id:'image-preview',
-                      class:'img-responsive img-circle profile-image' if user.avatar.exists?
-    image_tag 'default-avatar.jpg', id:'image-preview',
-                                    class:'img-responsive img-circle profile-image'
+                      id:'user_avatar',
+                      class:'img-responsive rounded-circle profile-image profile-preview' if user.avatar.exists?
+    image_tag 'default-avatar.jpg', id:'user_avatar',
+                                    class:'img-responsive rounded-circle profile-image profile-preview'
   end
 end
