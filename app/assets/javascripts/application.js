@@ -16,3 +16,5 @@
 //= require tether
 //= require bootstrap
 //= require loadMoreComments
+//= require posts
+//= require profiles
