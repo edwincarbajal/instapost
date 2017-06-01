@@ -9,6 +9,9 @@
       <div class="user-name-and-follow">
         <h3 class="profile-user-name">
           <%= @user.user_name %>
+          <% if @user.verified %>
+          <%= fa_icon("check-circle", class: "user-verified") %>
+          <% end %>
         </h3>
         <span>
           <% if @user === current_user %>

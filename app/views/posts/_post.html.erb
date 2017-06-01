@@ -4,6 +4,9 @@
       <div class="thumb-img"></div>
       <div class="user-name">
         <%= link_to p.user.user_name, profile_path(p.user.user_name) %>
+        <% if p.user.verified %>
+          <%= fa_icon("check-circle", class: "user-verified") %>
+        <% end %>
       </div>
       <div class="time-ago">
         <%= "#{time_ago_in_words(p.created_at)} ago" %>
