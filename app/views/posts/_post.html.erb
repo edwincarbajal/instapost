@@ -40,7 +40,7 @@
       </div>
       <div class="comment-like-form row">
         <div class="like-button col-sm-1">
-          <%= fa_icon("heart-o") %>
+          <%= link_to fa_icon("heart-o"), like_post_path(p.id), remote: true, id: "like_#{p.id}" %>
         </div>
         <%= render 'comments/form', p: p %>
       </div>
