@@ -1,6 +1,6 @@
 module PostsHelper
   def display_likes(post)
-    votes = post.votes_for.up.by_type(User)
+    votes = post.votes_for.up.by_type('User')
     return list_likers(votes) if votes.size <= 8
     count_likers(votes)
   end
@@ -19,7 +19,7 @@ module PostsHelper
           user_names.push(link_to voter.user_name, profile_path(voter.user_name), class: 'user-name')
         end
       end
-      user_names.to_sentence.html_safe + like_plural(votes) if votes.count >= 1
+      user_names.to_sentence.html_safe + like_plural(votes)
     end
 
     def count_likers(votes)
