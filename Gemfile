@@ -18,6 +18,8 @@ gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 # simple-form
 gem 'simple_form'
+# faker
+gem 'faker'
 # votes
 gem 'acts_as_votable', '~> 0.10.0'
 # pagination

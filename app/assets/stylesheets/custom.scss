@@ -95,7 +95,7 @@ nav {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
+    // margin-right: 0.3em; //comment?
     color: #125688;
     font-size: 15px;
   }
@@ -124,6 +124,7 @@ nav {
 
 .comments {
   .paginator {
+    margin: 0.5em;
     .more-comments {
       color: #A5A7AA;
     }
@@ -184,6 +185,11 @@ nav {
   a :hover {
     color: #2D6DA8;
   }
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
 }
 
 /* registration */
@@ -292,6 +298,7 @@ footer {
 /* profiles */
 
 #user_avatar {
+  padding: 1em;
   margin: 20px auto;
 }
 
