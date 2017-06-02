@@ -17,6 +17,7 @@
       <%= link_to(image_tag( p.image.url(:medium), class: "img-responsive" ), post_path(p) )%>
     </div>
     <div class="post-bottom">
+      <%= render 'posts/likes', post: p %>
       <div class="caption">
         <div class="caption-content">
           <div class="user-name">
@@ -40,7 +41,7 @@
       </div>
       <div class="comment-like-form row">
         <div class="like-button col-sm-1">
-          <%= fa_icon("heart-o") %>
+          <%= link_to fa_icon("#{liked_post(p)}", id: "like_#{p.id}"), like_post_path(p.id), remote: true %>
         </div>
         <%= render 'comments/form', p: p %>
       </div>
