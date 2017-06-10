@@ -6,12 +6,11 @@ module PostsHelper
   end
 
   def liked_post(post)
-    return 'heart' if current_user.voted_for?(post)
-    # return 'heart' if current_user.voted_as_when_voted_for(post)
+    return 'heart' if current_user.voted_as_when_voted_for(post)
     'heart-o'
   end
 
-  def liked_post_url(post)
+  def check_link_path(post)
     return unlike_post_path(post) if current_user.voted_as_when_voted_for(post)
     like_post_path(post)
   end

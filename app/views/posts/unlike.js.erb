@@ -1,2 +1,3 @@
-// $("#like_<%= @post.id %>").removeClass('fa-heart').addClass('fa fa-heart-o');
-// $("#likes_<%= @post.id %>").html("<%=j (render partial: 'posts/likes', locals: { post: @post} ) %>");
+$("#like_<%= @post.id %>").removeClass('fa-heart').addClass('fa fa-heart-o');
+$("#like_<%= @post.id %>").parent().attr('href', "<%= like_post_path(@post) %>");
+$("#likes_<%= @post.id %>").html("<%=j (render partial: 'posts/likes', locals: { post: @post} ) %>");
