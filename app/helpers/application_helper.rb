@@ -32,4 +32,8 @@ module ApplicationHelper
     image_tag 'default-avatar.jpg', id:'user_avatar',
                                     class:'img-responsive rounded-circle profile-image profile-preview'
   end
+
+  def pagination_count?
+    Post.all.count > 2
+  end
 end
