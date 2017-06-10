@@ -6,8 +6,13 @@ module PostsHelper
   end
 
   def liked_post(post)
-    return 'heart' if current_user.voted_for?(post)
+    return 'heart' if current_user.voted_as_when_voted_for(post)
     'heart-o'
+  end
+
+  def check_link_path(post)
+    return unlike_post_path(post) if current_user.voted_as_when_voted_for(post)
+    like_post_path(post)
   end
 
   private
@@ -19,7 +24,7 @@ module PostsHelper
           user_names.push(link_to voter.user_name, profile_path(voter.user_name), class: 'user-name')
         end
       end
-      user_names.to_sentence.html_safe + like_plural(votes)
+      return user_names.to_sentence.html_safe + like_plural(votes) if votes.count >= 1
     end
 
     def count_likers(votes)

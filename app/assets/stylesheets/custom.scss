@@ -122,6 +122,16 @@ nav {
   line-height: 18px;
 }
 
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
+}
+
 .comments {
   .paginator {
     margin: 0.5em;
@@ -277,22 +287,6 @@ nav {
   margin-left: 15px;
 }
 
-/* footer */
-
-footer {
-  position: relative;
-  bottom: 30px;
-  left: 0;
-  display: block;
-  p {
-    margin-bottom: 0;
-    text-align: center;
-    color: #000;
-    .heart {
-      color: red;
-    }
-  }
-}
 
 
 /* profiles */
@@ -343,4 +337,21 @@ footer {
 
 .profile-bio {
   margin-top: 20px;
+}
+
+/* footer */
+
+footer {
+  position: relative;
+  bottom: 30px;
+  left: 0;
+  display: block;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    .heart {
+      color: red;
+    }
+  }
 }
