@@ -38,7 +38,7 @@
       </div>
       <div class="comment-like-form row">
         <div class="like-button col-sm-1">
-          <%= link_to fa_icon("#{liked_post(p)}", id: "like_#{p.id}"), "#{check_link_path(p)}", remote: true %>
+          <%= link_to fa_icon("#{liked_post(p)}", class: "like", id: "like_#{p.id}"), "#{check_link_path(p)}", remote: true %>
         </div>
         <%= render 'comments/form', p: p %>
       </div>
