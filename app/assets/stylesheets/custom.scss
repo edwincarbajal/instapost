@@ -28,8 +28,18 @@ html, body {
   height: 100%;
 }
 
-nav {
+/*  navbar */
+
+.navbar-brand {
+  color: #125688 !important;
+}
+
+.navbar-light {
   background-color: #fff;
+  // height: 54px;
+  .navbar-nav li a {
+    color: #125688;
+  }
 }
 
 /* posts feed */
