@@ -1,0 +1,9 @@
+<span id="notification_count"><%= current_user.notifications.count %></span>
+<%= link_to fa_icon('flag-o'), '#', class: 'nav-link', id: 'notificationLink' %>
+<!-- Notification Popup Code... -->
+<div id="notificationContainer">
+  <div id="notificationTitle">Notifications</div>
+  <div id="notificationsBody" class="notifications">
+    <ul>
+      <%= render current_user.notifications.order('created_at DESC') %>
+      

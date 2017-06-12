@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require tether
 //= require bootstrap
+//= require notifications
 //= require loadMoreComments
 //= require posts
 //= require profiles

@@ -1,18 +1,36 @@
 <% if user_signed_in? %>
-  <nav class="navbar navbar-toggleable-md navbar-light">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <%= link_to 'instapost', root_path, class: "navbar-brand" %>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "New Post", new_post_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar-container">
+  <div class="container">
+    <nav class="navbar navbar-toggleable-xl navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand -->
+        <%= link_to 'instapost', root_path, class: 'navbar-brand' %>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="notification_li">
+              <%= render 'notifications/notification_dropdown' %>
+                  </ul>
+                </div>
+                <div id="notificationFooter"><a href="#">See All</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Profile', profile_path(current_user.user_name), class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+</div>
 <% end %>
