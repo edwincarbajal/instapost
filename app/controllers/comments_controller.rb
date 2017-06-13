@@ -28,6 +28,8 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @post.comments.find(params[:id])
     if @comment.user_id == current_user.id
+      comment_notification = Notification.where(notified_by_id: @comment.user_id, post: @post, identifier: @comment)
+      Notification.destroy(comment_notification)
       @comment.destroy
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -39,7 +41,6 @@ class CommentsController < ApplicationController
   private
 
     def create_notification(post, comment)
-      binding.pry
       return if post.user.id == current_user.id
       Notification.create(user_id: post.user.id,
                           notified_by_id: current_user.id,
