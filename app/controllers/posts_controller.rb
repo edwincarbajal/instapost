@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
   before_action :owned_post, only: [:edit, :update, :destroy]
-  before_action :get_posts, only: [:index]
+  before_action :filtered_posts, only: [:index]
+  before_action :all_posts, only: [:browse]
 
   def index
   end
@@ -62,10 +63,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def browse
+  end
+
   private
 
-    def get_posts
-      @posts = Post.all.order('created_at DESC').page params[:page]
+    def all_posts
+      @posts = Post.all.order('created_at DESC').page(params[:page])
+    end
+
+    def filtered_posts
+      @posts = Post.of_current_and_followed_users(current_user.following, current_user)
     end
 
     def set_post

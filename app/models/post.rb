@@ -11,4 +11,8 @@ class Post < ApplicationRecord
 
   has_attached_file :image, styles: { medium: "640x" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  scope :of_followed_users, -> (following_users) { where user_id: following_users }
+  scope :of_current_user, -> (current_user) { where user_id: current_user }
+  scope :of_current_and_followed_users, -> (following, current) {   self.of_followed_users(following).or(self.of_current_user(current)) }
 end
