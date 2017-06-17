@@ -1,4 +1,4 @@
-<div class="comment-form col-sm-11">
+<div class="comment-form col-11">
   <%=  form_for [p, p.comments.build], remote: true do |f| %>
     <%= f.text_field :content, placeholder: "Add a comment...", class: "comment_content", id: "comment_content_#{p.id}" %>
   <% end %>

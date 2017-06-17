@@ -1,11 +1,11 @@
 <div class="posts-wrapper">
   <div class="row profile-header no-gutters">
-    <div class="col-md-6">
+    <div id="user_avatar_wrapper" class="col-md-6">
       <div class="img-circle">
         <%= profile_avatar_select(@user) %>
       </div>
     </div>
-    <div class="col-md-6">
+    <div id="profile-details-wrapper" class="col-md-6">
       <div class="user-name-and-follow">
         <h3 class="profile-user-name">
           <%= @user.user_name %>
@@ -22,7 +22,7 @@
             <%= link_to 'Following', unfollow_user_path, remote: true, class: 'btn unfollow-button', id: 'unfollow-button', method: :post %>
           <% end %>
         </span>
-        <p class="profile-bio">
+        <p class="profile-bio text-justify">
           <%= @user.bio %>
         </p>
         <div class="user-statistics">
@@ -33,8 +33,10 @@
       </div>
     </div>
   </div>
-</div>
 
-<div id="posts" class="posts-wrapper row">
-  <%= render 'posts/posts'%>
+  <div id="posts" class="posts-wrapper row no-gutters">
+    <div class="col">
+      <%= render 'posts/posts'%>
+    </div>
+  </div>
 </div>
