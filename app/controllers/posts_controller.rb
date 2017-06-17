@@ -73,7 +73,7 @@ class PostsController < ApplicationController
     end
 
     def filtered_posts
-      @posts = Post.of_current_and_followed_users(current_user.following, current_user)
+      @posts = Post.of_current_and_followed_users(current_user.following, current_user).order('created_at DESC').page(params[:page])
     end
 
     def set_post
