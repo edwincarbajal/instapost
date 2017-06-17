@@ -34,7 +34,7 @@ module ApplicationHelper
   end
 
   def pagination_count?
-    Post.all.count > 2
+    Post.all.count > 8
   end
 
   def current_user_is_following(current_user, following_id)
