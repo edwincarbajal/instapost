@@ -493,3 +493,18 @@ footer {
     }
   }
 }
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  #user_avatar_wrapper {
+    text-align: center;
+  }
+  #profile-details-wrapper {
+    text-align: center;
+  }
+    .profile-bio {
+      padding: 0 15px;
+      text-align: center !important;
+    }
+}

@@ -36,8 +36,8 @@
           <%= render p.comments.last(4), p: p %>
         <% end %>
       </div>
-      <div class="comment-like-form row">
-        <div class="like-button col-sm-1">
+      <div class="comment-like-form row no-gutters">
+        <div class="like-button col">
           <%= link_to fa_icon("#{liked_post(p)}", class: "like", id: "like_#{p.id}"), "#{check_link_path(p)}", remote: true %>
         </div>
         <%= render 'comments/form', p: p %>
