@@ -477,6 +477,23 @@ font-size: 11px;
   }
 }
 
+/* new posts form */
+
+#upload-form-header {
+  height: 200px;
+  padding: 90px 0;
+  color: #fff;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+#upload-button-wrapper {
+  margin-top: 16px;
+}
+
+.upload-form-bottom-spacer {
+  padding: 0 20px;
+}
+
 /* footer */
 
 footer {

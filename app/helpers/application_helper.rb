@@ -20,17 +20,17 @@ module ApplicationHelper
   def form_image_select(post)
     return image_tag post.image.url(:medium),
                       id:'image-preview',
-                      class:'img-responsive' if post.image.exists?
-    image_tag 'default-avatar.jpg', id:'image-preview',
-                                 class:'img-responsive'
+                      class:'img-fluid' if post.image.exists?
+    image_tag '', id:'image-preview',
+                                 class:'img-fluid'
   end
 
   def profile_avatar_select(user)
     return image_tag user.avatar.url(:medium),
                       id:'user_avatar',
-                      class:'img-responsive rounded-circle profile-image profile-preview' if user.avatar.exists?
+                      class:'img-fluid rounded-circle profile-image profile-preview' if user.avatar.exists?
     image_tag 'default-avatar.jpg', id:'user_avatar',
-                                    class:'img-responsive rounded-circle profile-image profile-preview'
+                                    class:'img-fluid rounded-circle profile-image profile-preview'
   end
 
   def pagination_count?
