@@ -1,39 +1,51 @@
 <% if user_signed_in? %>
   <div id="navbar-container">
-  <div class="container">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Brand -->
-        <%= link_to 'instapost', root_path, class: 'navbar-brand' %>
+          <!-- Brand -->
+          <%= link_to 'instapost', root_path, class: 'navbar-brand' %>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse justify-content-end" id="nav-content">
-          <ul class="navbar-nav">
-            <li class="nav-item" id="notification_li">
-              <%= render 'notifications/notification_dropdown' %>
-                  </ul>
+          <!-- Links -->
+          <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+            <ul class="navbar-nav">
+              <li class="nav-item hidden-md-down" id="notification_li">
+                <%= render 'notifications/notification_dropdown' %>
+                    </ul>
+                  </div>
+                  <div id="notificationFooter"><%= link_to 'View All', notifications_path %></div>
                 </div>
-                <div id="notificationFooter"><%= link_to 'View All', notifications_path %></div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Explore', browse_posts_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Profile', profile_path(current_user.user_name), class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
-          </ul>
-        </div>
-    </nav>
+              </li>
+              <li class="nav-item hidden-lg-up">
+                <%= link_to 'Notifications', notifications_path, class: 'nav-link d-inline' %>
+                <% unless notification_counter(current_user) %>
+                  <span class="badge badge-danger">
+                      <%= current_user.notifications.where(read: false).count %>
+                  </span>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
+                <%#= link_to fa_icon('camera'), new_post_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Explore', browse_posts_path, class: 'nav-link' %>
+                <%#= link_to fa_icon('compass'), browse_posts_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Profile', profile_path(current_user.user_name), class: 'nav-link' %>
+                <%#= link_to fa_icon('user'), profile_path(current_user.user_name), class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                <%#= link_to fa_icon('sign-out'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </div>
   </div>
-</div>
 <% end %>
