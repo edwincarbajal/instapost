@@ -8,10 +8,10 @@
           <%= fa_icon("check-circle", class: "user-verified") %>
         <% end %>
       </div>
-      <div class="time-ago">
+      <!-- <div class="time-ago">
         <%= "#{time_ago_in_words(p.created_at)} ago" %>
-      </div>
-      <%#= render 'posts/post_settings', p: p %>
+      </div> -->
+      <%= render 'posts/post_settings', p: p %>
     </div>
     <div class="image center-block">
       <%= link_to(image_tag( p.image.url(:medium), class: "img-fluid" ), post_path(p) )%>
@@ -35,6 +35,9 @@
           </div>
           <%= render p.comments.last(4), p: p %>
         <% end %>
+      </div>
+      <div class="time-ago text-uppercase">
+        <%= "#{time_ago_in_words(p.created_at)} ago" %>
       </div>
       <div class="comment-like-form row no-gutters">
         <div class="like-button col">
