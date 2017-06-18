@@ -1,3 +1,11 @@
-<li class="nav-item">
-  <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: 'nav-link' %>
+<li class="notification-item nav-item <%= notification_read(notification)%> ">
+  <div class="thumb-img d-inline-block">
+    <%= post_user_avatar_select(notification.notified_by) %>
+  </div>
+  <div class="d-inline-block">
+    <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: 'nav-link' %>
+    <div class="time-ago text-uppercase">
+      <%= "#{time_ago_in_words(notification.created_at)} ago" %>
+    </div>
+  </div>
 </li>

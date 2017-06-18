@@ -1,3 +1,41 @@
 // Place all the styles related to the Notifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#notificationContainer {
+  #notificationsBody {
+    padding-top: 0 !important;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    .unread-notification {
+      background-color: #edf2fa !important;
+    }
+    .notification-item {
+      padding: 1em;
+      border-bottom: 1px solid #dddfe2;
+      background-color: #fff;
+      .thumb-img {
+        margin-right: 5px;
+      }
+      .post_profile_image {
+        height: 30px;
+        width: 30px;
+        margin-top: -28px;
+        border: 1px solid #f1f1f1;
+        border-radius: 50%;
+      }
+      a {
+        color: #0275d8;
+        &:hover, &:focus {
+          color: #014c8c !important;
+        }
+      }
+      .time-ago {
+        font-size: 12px;
+        padding: 0 8px;
+        color: #A5A7AA;
+      }
+    }
+  }
+}
