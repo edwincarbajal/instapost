@@ -1,13 +1,11 @@
 <% if p.user.id === current_user.id %>
-  <div class="settings">
-    <div class="btn-group" role="group">
-      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-      </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <%= link_to 'Edit', edit_post_path(p), class: "dropdown-item" %>
-        <%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "dropdown-item" %>
-      </div>
+<i class="post-setting fa fa-ellipsis-h" aria-hidden="true" data-toggle="modal" data-target=".bd-example-modal-sm"></i>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content text-center">
+      <%= link_to 'Edit', edit_post_path(p), class: "post-setting-link" %>
+      <%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "post-setting-link" %>
     </div>
   </div>
+</div>
 <% end %>

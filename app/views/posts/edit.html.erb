@@ -1,5 +1,4 @@
 <%= provide(:title, "Edit") %>
-
 <div class="posts-wrapper row">
   <div class="post">
     <div class="post-head">
@@ -8,11 +7,11 @@
       </div>
     </div>
     <div class="image center-block">
-      <%= image_tag @post.image.url(:medium), class: "img-responsive"%>
+      <%= image_tag @post.image.url(:medium), class: "img-fluid"%>
     </div>
     <%= simple_form_for @post, multipart: true, html: { class: "form-horizontal" } do |f| %>
       <div class="form-group text-center">
-         <%= f.input  :caption %>
+         <%= f.input :caption %>
       </div>
       <div class="form-group text-center">
         <%= link_to 'Cancel', root_path, class: "btn btn-danger" %>

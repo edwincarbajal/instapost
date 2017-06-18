@@ -180,18 +180,17 @@ font-size: 11px;
       color: #A5A7AA;
       float: right;
     }
-    .settings {
-      display: inline-block;
+    .post-setting {
+      color: #000;
       float: right;
-      border: 0px;
     }
-    .settings .btn {
-      border: none;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    .settings .dropdown-toggle::after {
-      margin-left: 0;
+    .post-setting-link {
+      padding: 20px;
+      text-decoration: none;
+      &:hover {
+        background-color: #f4f4f4;
+        color: #2D6396;
+      }
     }
   }
   .image {
@@ -215,6 +214,11 @@ font-size: 11px;
   }
   .user-name, .caption-content {
     display: inline;
+  }
+  .time-ago {
+    padding-top: 10px;
+    color: #A5A7AA;
+    // float: right;
   }
   #comment {
     margin-top: 7px;
@@ -529,8 +533,19 @@ footer {
   #profile-details-wrapper {
     text-align: center;
   }
-    .profile-bio {
-      padding: 0 15px;
-      text-align: center !important;
-    }
+  .profile-bio {
+    padding: 0 15px;
+    text-align: center !important;
+  }
+  .modal {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+  }
 }
