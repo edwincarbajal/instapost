@@ -13,6 +13,6 @@ class NotificationsController < ApplicationController
   private
 
     def get_notifications
-      @notifications = current_user.notifications
+      @notifications = current_user.notifications.order('created_at DESC')
     end
 end

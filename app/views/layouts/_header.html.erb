@@ -20,7 +20,7 @@
                 </div>
               </li>
               <li class="nav-item hidden-lg-up">
-                <%= link_to 'Notifications', notifications_path, class: 'nav-link d-inline' %>
+                <%= link_to 'Notifications', notifications_path, class: 'nav-link d-inline-block' %>
                 <% unless notification_counter(current_user) %>
                   <span class="badge badge-danger">
                       <%= current_user.notifications.where(read: false).count %>

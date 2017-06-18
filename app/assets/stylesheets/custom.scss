@@ -139,10 +139,28 @@ font-size: 11px;
   margin-top: 5em;
   margin-bottom: 5em;
   list-style: none;
+  .unread-notification {
+    background-color: #edf2fa !important;
+  }
   li {
     margin-top: 1em;
     background-color: white;
     padding: 1em;
+    .thumb-img {
+      margin-right: 5px;
+    }
+    .post_profile_image {
+      height: 30px;
+      width: 30px;
+      margin-top: -28px;
+      border: 1px solid #f1f1f1;
+      border-radius: 50%;
+    }
+    .time-ago {
+      font-size: 12px;
+      padding: 0 16px;
+      color: #A5A7AA;
+    }
   }
 }
 
@@ -229,6 +247,7 @@ font-size: 11px;
     display: inline;
   }
   .time-ago {
+    font-size: 12px;
     padding-top: 10px;
     color: #A5A7AA;
     // float: right;
@@ -560,5 +579,8 @@ footer {
     display: none;
     overflow: hidden;
     outline: 0;
+  }
+  .notification-index-list {
+    padding: 0;
   }
 }
