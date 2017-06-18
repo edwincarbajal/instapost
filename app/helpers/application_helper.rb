@@ -25,6 +25,14 @@ module ApplicationHelper
                                  class:'img-fluid'
   end
 
+  def post_user_avatar_select(user)
+    return image_tag user.avatar.url(:medium),
+                      id:'post_user_avatar',
+                      class:'img-fluid rounded-circle post_profile_image post_profile_preview' if user.avatar.exists?
+    image_tag 'default-avatar.jpg', id:'post_user_avatar',
+                                    class:'img-fluid post_profile_image post_profile_preview'
+  end
+
   def profile_avatar_select(user)
     return image_tag user.avatar.url(:medium),
                       id:'user_avatar',

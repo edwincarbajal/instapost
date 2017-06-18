@@ -1,7 +1,9 @@
 <div class="post-wrapper">
   <div class="post">
     <div class="post-head">
-      <div class="thumb-img"></div>
+      <div class="thumb-img d-inline-block">
+        <%= post_user_avatar_select(User.find(p.user)) %>
+      </div>
       <div class="user-name">
         <%= link_to p.user.user_name, profile_path(p.user.user_name) %>
         <% if p.user.verified %>
