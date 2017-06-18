@@ -170,6 +170,14 @@ font-size: 11px;
     color: #125688;
     font-size: 15px;
     line-height: 18px;
+    .thumb-img {
+      margin-right: 5px;
+    }
+    .post_profile_image {
+      height: 30px;
+      width: 30px;
+      border: 1px solid #f1f1f1;
+    }
     .user-name, .time-ago {
       display: inline;
     }
