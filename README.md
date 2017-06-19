@@ -46,7 +46,7 @@ To start the server in development run `rails s` and visit [http://localhost:333
 
 ## Authors
 
-* **Edwin Carbajal** - *Software Engineer* - [edwincarbajal](https://edwincarbajal.com)
+* **Edwin Carbajal** - *Software Engineer* - [edwincarbajal](http://edwincarbajal.com)
 
 ## About
 
