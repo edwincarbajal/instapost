@@ -3,7 +3,13 @@
     <%= post_user_avatar_select(notification.notified_by) %>
   </div>
   <div class="d-inline-block">
-    <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: 'nav-link' %>
+    <% if notification.notice_type == 'comment' %>
+      <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification), class: 'nav-link' %>
+    <% elsif notification.notice_type == 'like' %>
+      <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}d your post", link_through_path(notification), class: 'nav-link' %>
+    <% else %>
+      <%= link_to "#{notification.notified_by.user_name} started #{notification.notice_type}ing you", follow_link_through_path(notification), class: 'nav-link' %>
+    <% end %>
     <div class="time-ago text-uppercase">
       <%= "#{time_ago_in_words(notification.created_at)} ago" %>
     </div>
