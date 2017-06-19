@@ -27,7 +27,6 @@ class RelationshipsController < ApplicationController
       return if followed_user.id == current_user.id
       Notification.create(user_id: followed_user.id,
                           notified_by_id: current_user.id,
-                          post_id: 0,
                           identifier: followed_user.followers.count,
                           notice_type: 'follow')
     end
