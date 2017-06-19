@@ -1,87 +1,53 @@
 # intapost
 
-A web based instagram clone.
+A web based instagram clone built with Ruby on Rails, Javascript, AWS S3, & Bootstrap.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+rvm install ruby-2.4.1
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Clone the repo
 
 ```
-until finished
+git clone https://github.com/edwincarbajal/instapost.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Move to the project directory
 
 ```
-Give an example
+cd instapost
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Install gems
 
 ```
-Give an example
+bundle install
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+To start the server in development run `rails s` and visit [http://localhost:3333](http://localhost:3333)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Ruby on Rails](http://rubyonrails.org) - The web framework used
+* [Bootstrap](https://v4-alpha.getbootstrap.com) - The CSS framework used
+* [AWS S3](https://aws.amazon.com/s3/) - Simple, durable, massively scalable object storage
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Edwin Carbajal** - *Software Engineer* - [edwincarbajal](https://edwincarbajal.com)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## About
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* This was a lot of fun to create as I got to see how apps like Instagram work. I also explored new gems that made development easier and will be great reference for for future projects.
