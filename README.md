@@ -1,4 +1,4 @@
-# intapost
+# instapost
 
 A web based instagram clone built with Ruby on Rails, Javascript, AWS S3, & Bootstrap.
 
