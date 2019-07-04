@@ -1,3 +1,4 @@
+> Instapost is hosted on a free tier on [heroku](http://instapost-wb.herokuapp.com). Please wait a few seconds to start up.
 # instapost
 
 A web based instagram clone built with Ruby on Rails, Javascript, AWS S3, & Bootstrap.
