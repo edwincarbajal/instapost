@@ -27,7 +27,7 @@ gem'kaminari'
 # fontawesome
 gem "font-awesome-rails"
 # bootsrap v4
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '>= 4.3.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
