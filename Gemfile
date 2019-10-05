@@ -11,7 +11,7 @@ gem 'rails', '~> 5.0.3'
 # devise
 gem 'devise'
 # Paperclip
-gem 'paperclip', '~> 5.0.0'
+gem 'paperclip', '>= 5.2.0'
 # aws
 gem 'aws-sdk', '~> 2.3'
 # figaro
@@ -27,7 +27,7 @@ gem'kaminari'
 # fontawesome
 gem "font-awesome-rails"
 # bootsrap v4
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '>= 4.3.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
